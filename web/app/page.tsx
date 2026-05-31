@@ -92,6 +92,46 @@ export default async function Page() {
         </Reveal>
       </header>
 
+      {/* ───────────────────────── 1.5 HOW HERMES MADE THIS ───────────────────────── */}
+      <section className="border-t border-hairline py-24 sm:py-32">
+        <Reveal as="div" className="mb-12 max-w-2xl">
+          <span className="eyebrow text-rust-bright">The method</span>
+          <h2 className="mt-4 text-h2 font-display leading-[1.02] tracking-tight">
+            How Hermes made this
+          </h2>
+        </Reveal>
+        <div className="grid gap-10 border-t border-hairline pt-10 sm:grid-cols-3 sm:gap-8">
+          <Reveal as="div">
+            <h3 className="text-h3 font-display leading-tight text-bone">
+              Native vision
+            </h3>
+            <p className="mt-4 max-w-prose text-body text-bone-dim">
+              The same multimodal model that holds the style memory looks at the
+              image it just made and critiques it. The self-critique is real, not
+              a second model guessing.
+            </p>
+          </Reveal>
+          <Reveal as="div" delay={100}>
+            <h3 className="text-h3 font-display leading-tight text-bone">
+              A self-written skill
+            </h3>
+            <p className="mt-4 max-w-prose text-body text-bone-dim">
+              Each round the agent rewrites its own style-guide file. The skill
+              is the artifact that evolves.
+            </p>
+          </Reveal>
+          <Reveal as="div" delay={200}>
+            <h3 className="text-h3 font-display leading-tight text-bone">
+              One closed loop
+            </h3>
+            <p className="mt-4 max-w-prose text-body text-bone-dim">
+              Image generation through the tool gateway, vision, and memory live
+              in one agent, so taste can compound across iterations.
+            </p>
+          </Reveal>
+        </div>
+      </section>
+
       {/* ───────────────────────── 2. THE CONVERGENCE ───────────────────────── */}
       <section className="border-t border-hairline py-24 sm:py-32">
         <div className="grid gap-10 lg:grid-cols-[minmax(0,22rem)_minmax(0,1fr)] lg:gap-16">

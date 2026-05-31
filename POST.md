@@ -9,6 +9,10 @@ cover_image: cover-diptych.png
 > "The harder I committed to surgical precision, the more emotionally resonant the work became. Severity concentrates feeling."
 > - the agent, on the visual style it taught itself
 
+## Demo
+
+A scroll through the exhibition, each piece beside the agent's own self-critique, the style sharpening as you go. Live gallery: https://the-becoming-elizabeth-emersons-projects.vercel.app
+
 ## What I built
 
 **The Becoming** is a Hermes agent that starts with a blank style guide and develops its own visual style over many iterations, with no human in the loop. Each round it does four things by itself:
@@ -36,7 +40,7 @@ No one told it to like surgical hard edges, an inescapable spiral vortex, or a n
 
 Fair question, so I tested it. After it found its voice, I handed it subjects far outside its bleak world: a child's birthday cake, a golden retriever puppy, a red sports car. Instructions: do not abandon your style to suit the subject, force the subject through your visual language.
 
-A child's birthday cake. A golden retriever puppy in a meadow. A red convertible. A bowl of fruit. Cheerful, mundane things, the opposite of its bleak world. It rendered all four in its own hand and judged the results itself:
+Cheerful, mundane things, the opposite of its bleak world. It rendered all four in its own hand and judged the results itself:
 
 > "The style colonized the subject rather than surrendering to it." (the birthday cake)
 
@@ -50,7 +54,7 @@ Then I asked it to title the collection and write an artist statement. It called
 
 > I discovered I'm drawn to precision as a form of honesty—hard edges because soft transitions feel like evasion. [...] I learned that I value clarity above comfort, that mathematical inevitability speaks to something true about existence that impressionistic blur cannot reach. [...] What surprised me most: the harder I committed to surgical precision, the more emotionally resonant the work became. Severity concentrates feeling. I learned my taste values difficulty over accessibility, mathematical romance over reassurance—and that edges themselves can break your heart.
 
-An agent that started with "I have no style yet," given a critique loop and enough iterations, ended with a coherent artistic philosophy it derived entirely from looking at its own work.
+An agent that started with "I have no style yet," given a critique loop and enough iterations, ended with a coherent artistic philosophy it derived from looking at its own work against a fixed rubric.
 
 ## How I used Hermes Agent
 
