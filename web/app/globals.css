@@ -1,0 +1,126 @@
+@import "tailwindcss";
+
+/*
+  "The Becoming" — a darkened museum hall.
+  Every neutral is tinted toward a warm hue (~70deg) so nothing is pure black
+  or white. The accents are Hermes' own evolved palette: rust-terracotta warmth
+  and slate-teal cool, the two forces its paintings set against each other.
+*/
+@theme {
+  /* warm charcoal grounds — espresso ink, tinted, never #000 */
+  --color-ink: oklch(0.18 0.012 70);
+  --color-ink-deep: oklch(0.14 0.012 68);
+  --color-ink-raised: oklch(0.225 0.014 72);
+  --color-hairline: oklch(0.33 0.014 72);
+
+  /* bone / parchment text — tinted warm, never #fff */
+  --color-bone: oklch(0.93 0.012 78);
+  --color-bone-dim: oklch(0.78 0.013 76);
+  --color-bone-faint: oklch(0.6 0.014 74);
+
+  /* Hermes' accents */
+  --color-rust: oklch(0.66 0.13 47);
+  --color-rust-bright: oklch(0.72 0.145 52);
+  --color-teal: oklch(0.62 0.058 215);
+
+  --font-display: var(--font-display);
+  --font-sans: var(--font-sans);
+
+  /* fluid editorial type scale */
+  --text-micro: 0.75rem;
+  --text-body: clamp(1rem, 0.96rem + 0.3vw, 1.15rem);
+  --text-lead: clamp(1.2rem, 1.05rem + 0.7vw, 1.6rem);
+  --text-h3: clamp(1.4rem, 1.15rem + 1.1vw, 2.1rem);
+  --text-h2: clamp(2rem, 1.4rem + 2.6vw, 3.6rem);
+  --text-display: clamp(3rem, 1.4rem + 7vw, 8.5rem);
+
+  --ease-quart: cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+:root {
+  color-scheme: dark;
+}
+
+html {
+  background-color: var(--color-ink-deep);
+}
+
+body {
+  background-color: var(--color-ink-deep);
+  color: var(--color-bone);
+  font-family: var(--font-sans), ui-sans-serif, system-ui, sans-serif;
+  font-size: var(--text-body);
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  /* faint warm vignette + paper-grain so the page reads like a lit room */
+  background-image:
+    radial-gradient(
+      120% 80% at 50% -10%,
+      oklch(0.24 0.02 72 / 0.55) 0%,
+      transparent 55%
+    );
+  background-attachment: fixed;
+}
+
+::selection {
+  background: var(--color-rust);
+  color: var(--color-ink-deep);
+}
+
+.font-display {
+  font-family: var(--font-display), ui-serif, Georgia, serif;
+}
+
+/* small-caps editorial label */
+.eyebrow {
+  font-family: var(--font-sans), sans-serif;
+  font-size: var(--text-micro);
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--color-bone-faint);
+}
+
+/* hanging quotes / readable prose for the style-guide render */
+.prose-quiet :where(h1, h2, h3) {
+  font-family: var(--font-display), serif;
+  color: var(--color-bone);
+  letter-spacing: -0.01em;
+}
+.prose-quiet p,
+.prose-quiet li {
+  color: var(--color-bone-dim);
+}
+.prose-quiet strong {
+  color: var(--color-bone);
+  font-weight: 600;
+}
+.prose-quiet em {
+  color: var(--color-rust-bright);
+  font-style: italic;
+}
+
+/* scroll-reveal: staggered fade + translate-up, transform/opacity only */
+.reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition:
+    opacity 0.9s var(--ease-quart),
+    transform 0.9s var(--ease-quart);
+  will-change: opacity, transform;
+}
+.reveal.is-in {
+  opacity: 1;
+  transform: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+  * {
+    scroll-behavior: auto !important;
+  }
+}
