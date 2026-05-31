@@ -86,7 +86,7 @@ export default async function Page() {
           <Stat label="Eras lived" value={String(eras.length)} />
           <Stat
             label="Currently painting in"
-            value={currentEra ? truncate(stripParenthetical(currentEra), 26) : "—"}
+            value={currentEra ? truncate(stripParenthetical(currentEra), 26) : "·"}
             wide
           />
         </Reveal>
@@ -142,7 +142,7 @@ export default async function Page() {
             </h2>
             <p className="mt-6 max-w-md text-bone-dim">
               Each painting is scored against the one before it. At first the
-              number lurches — Hermes is discarding whole approaches between
+              number lurches. Hermes is discarding whole approaches between
               strokes. As a hand emerges, consecutive works begin to rhyme, and
               the line steadies. Convergence is the shape of taste forming.
             </p>
@@ -222,8 +222,8 @@ export default async function Page() {
             </h2>
             <p className="mt-6 text-bone-dim">
               Proof that Hermes internalised a style rather than memorising a
-              world. Hand it subjects from far outside its bleak architecture — a
-              birthday cake, a puppy, a sunlit fruit bowl — and watch the voice
+              world. Hand it subjects from far outside its bleak architecture (a
+              birthday cake, a puppy, a sunlit fruit bowl), and watch the voice
               devour them whole. In its own assessment of each:
             </p>
           </Reveal>
