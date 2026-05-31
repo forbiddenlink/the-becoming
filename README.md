@@ -6,6 +6,8 @@ An AI agent given a blank style guide that develops its **own** visual style ove
 
 Built for the Hermes Agent Challenge.
 
+**Live gallery:** https://the-becoming-elizabeth-emersons-projects.vercel.app
+
 ## How it works
 
 The self-improvement loop (`sketchbook.py`), each iteration:
