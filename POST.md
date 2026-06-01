@@ -56,6 +56,14 @@ Then I asked it to title the collection and write an artist statement. It called
 
 An agent that started with "I have no style yet," given a critique loop and enough iterations, ended with a coherent artistic philosophy it derived from looking at its own work against a fixed rubric.
 
+## One loop, four times
+
+To check the first run was not a lucky seed, I ran the same loop from the same blank style guide four separate times. Every run grew a different but internally consistent hand: the surgical spiral descent you just saw, a minimalist tri-band beacon it called "Chromatic Solitude," an industrial glasshouse overrun by crystalline growth ("Forgotten Gardens"), and a painterly anti-focal vortex where the focal point hides from your eye. Same critique loop, four self-named styles, each one coherent across dozens of different subjects.
+
+![Four runs from the same blank start, four self-taught styles](web/public/four-voices.png)
+
+The voice is not the artifact. The loop that grows one is.
+
 ## How I used Hermes Agent
 
 This only works because Hermes closes the loop inside one agent:
