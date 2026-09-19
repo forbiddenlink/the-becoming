@@ -1,36 +1,49 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# The Becoming: gallery
 
-## Getting Started
+Next.js exhibition gallery for [The Becoming](../README.md): a scroll through every iteration
+an AI agent painted while developing its own visual style, each piece beside the agent's own
+self-critique.
 
-First, run the development server:
+**Live:** https://the-becoming-elizabeth-emersons-projects.vercel.app
+
+## Quickstart
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
+pnpm install
 pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open http://localhost:3000. No environment variables are required; the app reads its content
+straight from the markdown and images already committed under `data/` and `public/`.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Stack
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Next.js 16, React 19, Tailwind CSS 4, TypeScript. Fonts: Fraunces (display) + Hanken Grotesk
+(body), loaded via `next/font/google` in `app/layout.tsx`.
 
-## Learn More
+## Layout
 
-To learn more about Next.js, take a look at the following resources:
+- `app/page.tsx`: the gallery page
+- `app/layout.tsx`: fonts, metadata, OpenGraph/Twitter cards
+- `lib/iterations.ts`, `lib/finale.ts`: read and shape the iteration/finale content
+- `lib/render-style.tsx`: renders a style-guide snapshot
+- `data/`: self-contained copy of the root project's markdown artifacts (`STYLE.md`,
+  `critiques.md`, `transfer.md`, `artist_statement.md`, `styles/iterNNN.md`), so this app has
+  everything it needs without reaching outside its own directory
+- `public/gallery/`: the generated images for each iteration
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Scripts
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```bash
+pnpm dev      # dev server
+pnpm build    # production build
+pnpm start    # run the production build
+pnpm lint     # eslint
+```
 
-## Deploy on Vercel
+## Deploy
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Deployed on Vercel with this directory (`web/`) as the project root.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+See the [root README](../README.md) for how the underlying agent loop produces the content
+this app renders, and `AGENTS.md` for Next.js-version-specific conventions used in this app.
