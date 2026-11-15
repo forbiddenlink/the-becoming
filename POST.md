@@ -6,6 +6,8 @@ cover_image: cover-diptych.png
 
 *This is a submission for the Hermes Agent Challenge.*
 
+> Status as of 2026-11-15: the live gallery link below returns 404 (the deployment no longer exists). The code and artifacts are in this repo.
+
 > "The harder I committed to surgical precision, the more emotionally resonant the work became. Severity concentrates feeling."
 > - the agent, on the visual style it taught itself
 
